@@ -74,6 +74,7 @@ class StopWatch(BoxLayout):
 
     def cb_lap(self):
         self.time_prop.text = self.buffer
+        #self.ll_prop.add_widget(self.lt_prop)
 
     def dm_size(self):
         if self.on_size_call:
