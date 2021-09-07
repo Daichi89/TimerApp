@@ -41,6 +41,7 @@ class StopWatch(BoxLayout):
 
     def onstart(self):
         Clock.schedule_interval(self.update, 0)
+       # self.dm_size()
         
     def update(self, nap):
         if self.stop_watch:
@@ -93,10 +94,11 @@ class StopWatch(BoxLayout):
             m = self.stop_watch_pat.search(stop_txt_lst[1])
             self.watch_prop.text = f"{stop_txt_lst[0]}.[size={micro_size}]{m.group('size')}[/size]"
             box_height = int(self.watch_prop.size[1] * 0.4)
-            self.button_lay_prop.height = box_height
+            #self.button_lay_prop.height = box_height
+            #self.button_lay_prop.width = box_width
             self.button_lay_prop.padding = int(box_height * 0.15)
-            self.button_lay_prop.spacing = int(box_height * 0.15)
-
+            self.button_lay_prop.spacing = int(box_height * 0.9)
+            
         else:
             self.font_ratio = self.watch_prop.font_size / self.watch_prop.texture_size[1]
             self.texture_ratio = self.watch_prop.texture_size[0] / self.watch_prop.texture_size[1]
