@@ -36,7 +36,7 @@
     bold: True
     background_color: 0, 0, 0, 0
     background_normal: ''
-    back_color: 1,0,0,1
+    back_color: 0,1,0,0.5
     border_radius: [60, ]
     size: 120, 120
     size_hint: None, None
@@ -84,7 +84,7 @@ StopWatch:
     BackgroundLayout: 
         orientation: 'horizontal'
         id: button_lay
-        #height: 90
+        height: 90
         padding: 50
         spacing: 500
         size_hint: (1, 0.3)
@@ -93,8 +93,8 @@ StopWatch:
         WatchButton: 
             id: res
             text: 'Reset'
-           # background_normal: '#ff6666'
-            #background_down: '#797979'
+            background_normal: 'button_normal.png'
+            background_down: 'button_down.png'
             on_press: self.parent.parent.cb_select()
 
         WatchButton: 
